@@ -116,7 +116,7 @@ public class Utils {
 			System.out.println("O produto " + nome + " foi inserido com sucesso!");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.err.println("Erro salvando produto");
+			System.err.println("Erro salvando produto.");
 			System.exit(-42);
 		}
 	}
@@ -141,7 +141,7 @@ public class Utils {
 				teclado.useLocale(Locale.US);
 				float preco = teclado.nextFloat();
 
-				System.out.println("Informe a quantidade em estoque");
+				System.out.println("Informe a quantidade em estoque: ");
 				int estoque = teclado.nextInt();
 
 				String ATUALIZAR = "UPDATE produtos SET nome=?, preco=?, estoque=? WHERE id=?";
@@ -155,7 +155,7 @@ public class Utils {
 				upd.executeUpdate();
 				upd.close();
 				desconectar(conn);
-				System.out.println("O produto " + nome + " foi atualizado com sucesso");
+				System.out.println("O produto " + nome + " foi atualizado com sucesso!");
 			} else {
 				System.out.println("Não existe produto com o Id informado.");
 			}
@@ -194,13 +194,13 @@ public class Utils {
 				del.executeUpdate();
 				del.close();
 				desconectar(conn);
-				System.out.println("O produto foi deletado com sucesso");
+				System.out.println("O produto foi deletado com sucesso.");
 			} else {
-				System.out.println("Não existe o produto com o id informado");
+				System.out.println("Não existe o produto com o id informado.");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.err.println("Erro ao deletar produto");
+			System.err.println("Erro ao deletar produto.");
 			System.exit(-42);
 		}
 
